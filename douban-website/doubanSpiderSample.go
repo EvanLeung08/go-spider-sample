@@ -81,8 +81,6 @@ func HttpGet(url string) (result string, err error) {
 	//add user-agent to simulate browser's behaviour
 	req.Header.Add("User-Agent", "myClient")
 	resp, httpErr := client.Do(req)
-
-	fmt.Println("resp:", resp)
 	if httpErr != nil {
 		fmt.Println("http.Get err:", err)
 		err = httpErr
